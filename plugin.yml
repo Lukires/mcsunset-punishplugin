@@ -1,0 +1,6 @@
+name: SunPunish
+version: 1.0
+main: us.sunset.main.Main
+description: Punishment plugin by Lukiwoki/Lukire
+commands:
+ punish:
