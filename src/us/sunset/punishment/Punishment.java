@@ -30,6 +30,36 @@ public class Punishment
 		this.reason=reason;
 	}
 	
+	public void setPunishmentType(PunishmentType type)
+	{
+		this.type=type;
+	}
+	
+	public void setDuration(int duration)
+	{
+		this.duration=duration;
+	}
+	
+	public void setReason(String reason)
+	{
+		this.reason=reason;
+	}
+	
+	public PunishmentType getPunishmentType()
+	{
+		return this.type;
+	}
+	
+	public int getDuration()
+	{
+		return this.duration;
+	}
+	
+	public String getReason()
+	{
+		return this.reason;
+	}
+	
 	
 	
 }
