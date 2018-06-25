@@ -12,10 +12,11 @@ public abstract class GUI
 	private static HashMap<Player, GUI> inventoryList = new HashMap<Player, GUI>();
 	private HashMap<Integer, Item> items = new HashMap<Integer, Item>();
 	private Inventory inv;
+	private Player p;
 	
-	
-	public GUI(Inventory inv)
+	public GUI(Player p, Inventory inv)
 	{	
+		this.p=p;
 		this.inv=inv;
 	}
 	
@@ -29,7 +30,7 @@ public abstract class GUI
 		
 	}
 	
-	public void open(Player p)
+	public void open()
 	{
 		build();
 		p.openInventory(inv);
@@ -60,6 +61,8 @@ public abstract class GUI
 	{
 		return inv;
 	}
+
+	public Player getPlayer(){ return p; }
 	
 
 }
