@@ -2,6 +2,7 @@ package us.sunset.gui;
 
 import org.bukkit.inventory.ItemStack;
 
+
 public abstract class Item 
 {
 	
