@@ -9,7 +9,7 @@ public class PunishmentGUI extends GUI
 {
 
 	public PunishmentGUI(Player p) {
-		super(p, Bukkit.createInventory(null, 54, "Punish"));
+		super(p, Bukkit.createInventory(null, 54, "Punish "+p.getDisplayName()));
 		// TODO Auto-generated constructor stub
 	}
 
