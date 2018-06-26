@@ -43,7 +43,7 @@ public class InventoryHandler implements Listener
 		
 		e.setCancelled(true);
 		
-		invGUI.getItem(e.getSlot()).click();
+		invGUI.getItem(e.getSlot()).click(p, e.getClick());
 	}
 	
 	@EventHandler

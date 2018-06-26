@@ -10,7 +10,7 @@ public abstract class GUI
 	
 	
 	private static HashMap<Player, GUI> inventoryList = new HashMap<Player, GUI>();
-	private HashMap<Integer, Item> items = new HashMap<Integer, Item>();
+	private HashMap<Integer, GUIItem> items = new HashMap<Integer, GUIItem>();
 	private Inventory inv;
 	private Player p;
 	
@@ -22,7 +22,7 @@ public abstract class GUI
 	
 	protected abstract void build();
 	
-	protected void addItem(Item item, int slot)
+	protected void addItem(GUIItem item, int slot)
 	{
 		
 		items.put(slot, item);
@@ -37,7 +37,7 @@ public abstract class GUI
 		inventoryList.put(p, this);
 	}
 	
-	public Item getItem(int slot)
+	public GUIItem getItem(int slot)
 	{
 		return items.get(slot);
 	}
