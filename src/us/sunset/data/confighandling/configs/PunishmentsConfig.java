@@ -1,7 +1,10 @@
 package us.sunset.data.confighandling.configs;
 
-/**
- * Created by Lukas on 7/3/2018.
- */
-public class PunishmentsConfig {
+import us.sunset.data.confighandling.ConfigManager;
+
+public class PunishmentsConfig extends ConfigManager {
+    public PunishmentsConfig(String key)
+    {
+        super("punishments", key);
+    }
 }
