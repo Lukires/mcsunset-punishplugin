@@ -5,6 +5,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import us.sunset.gui.InventoryHandler;
+import us.sunset.punishment.PreventPlayerJoinListener;
 import us.sunset.punishment.PunishCommand;
 
 public class Main extends JavaPlugin
@@ -14,6 +15,7 @@ public class Main extends JavaPlugin
 		Server server = getServer();
 		PluginManager pm = server.getPluginManager();
 		pm.registerEvents(new InventoryHandler(), this);
+		pm.registerEvents(new PreventPlayerJoinListener(), this);
 		server.getPluginCommand("punish").setExecutor(new PunishCommand());
 	}
 	

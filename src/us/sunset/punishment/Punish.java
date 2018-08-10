@@ -11,11 +11,39 @@ public class Punish
 	{
 		this.p=p;
 	}
-	
+
 	public void apply(Punishment pun)
 	{
 		
 	}
-	
+
+	public boolean isBanned()
+	{
+		return false;
+	}
+
+	public boolean isMuted() {
+		return false;
+	}
+
+	public Punishment[] getPunishments()
+	{
+		return null;
+	}
+
+	public Punishment[] getBans()
+	{
+		return null;
+	}
+
+	public Punishment[] getMutes()
+	{
+		return null;
+	}
+
+	public Punishment getLatestBan()
+	{
+		return null;
+	}
 
 }

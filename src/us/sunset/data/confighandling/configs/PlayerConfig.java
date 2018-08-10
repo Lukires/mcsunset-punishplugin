@@ -15,9 +15,7 @@ public class PlayerConfig extends ConfigManager {
     }
 
     public PlayerConfig(UUID uuid) {
-        super("players", uuid.toString());
+        super("/players", uuid.toString()+".yml");
     }
-
-
 
 }

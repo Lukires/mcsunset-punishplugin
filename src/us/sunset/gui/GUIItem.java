@@ -23,14 +23,11 @@ public abstract class GUIItem
 
 	public abstract void click(Player p, ClickType click);
 
-	public ItemStack getItemStack()
-	{
-		return this.is;
-	}
+	public abstract ItemStack getItemStack();
 
 	public ItemMeta getItemMeta()
 	{
-		return this.im;
+		return getItemStack().getItemMeta();
 	}
 
 	public GUI gui;

@@ -22,7 +22,7 @@ public abstract class GUI
 	
 	protected abstract void build();
 	
-	protected void addItem(GUIItem item, int slot)
+	protected void setItem(GUIItem item, int slot)
 	{
 		
 		items.put(slot, item);

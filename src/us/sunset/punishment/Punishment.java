@@ -2,12 +2,11 @@ package us.sunset.punishment;
 
 public class Punishment 
 {
-	
-	
 	private PunishmentType type;
 	private int duration;
 	private String reason;
-	
+	private String source;
+
 	public Punishment(PunishmentType type)
 	{
 		this(type, 0, type.name());
@@ -29,7 +28,9 @@ public class Punishment
 		this.duration=duration;
 		this.reason=reason;
 	}
-	
+
+	public void setSource(String source){this.source=source;}
+
 	public void setPunishmentType(PunishmentType type)
 	{
 		this.type=type;

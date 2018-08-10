@@ -2,6 +2,11 @@ package us.sunset.punishment;
 
 public enum Punishments 
 {
+
+
+	/*
+	I decided to make all of the punishments hardcoded for now, as I don't feel like making a bunch of customization for now
+	 */
 	
 	DISRESPECT(
 			new Punishment(PunishmentType.WARNING), 

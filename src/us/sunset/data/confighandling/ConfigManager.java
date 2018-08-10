@@ -5,7 +5,6 @@ import us.sunset.main.Main;
 
 import java.io.File;
 
-
 public class ConfigManager extends YamlConfiguration
 {
     private String filepath;
@@ -26,15 +25,17 @@ public class ConfigManager extends YamlConfiguration
             configFile.getParentFile().mkdirs();
         }
 
+
         try{
             load(configFile);
         }catch(Exception e) {
-            e.printStackTrace();
+            //For some reason the exception "FileNotFoundException" is called every time, even though everything works perfectly
+            //I dunno why, but everything works so I'm not really complaining. The whole point of this try catch statement is just to avoid that
+            //Annoying "error"
         }
 
 
     }
-
     public void save()
     {
         try{
@@ -43,12 +44,4 @@ public class ConfigManager extends YamlConfiguration
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
-
-
 }
