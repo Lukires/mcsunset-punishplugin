@@ -1,6 +1,7 @@
 package us.sunset.gui.items;
 
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
@@ -15,11 +16,9 @@ public class PunishmentsItem extends GUIItem
 {
 
     private Punishments punishment;
-    private OfflinePlayer target;
 
-    public PunishmentsItem(Punishments punishment, OfflinePlayer target)
+    public PunishmentsItem(Punishments punishment)
     {
-        this.target=target;
         this.punishment=punishment;
 
         switch(punishment.getSev2().getPunishmentType())
@@ -33,14 +32,11 @@ public class PunishmentsItem extends GUIItem
                 is=new ItemStack(Material.IRON_SWORD, 1);
                 break;
         }
-
-
-
         im=is.getItemMeta();
 
         //The name() function returns word in all uppercase. We change it so only the first word is uppercase, for the sake of it being
         //Visually appealing.
-        im.setDisplayName(punishment.name().charAt(0) + punishment.name().substring(1).toLowerCase());
+        im.setDisplayName(""+ChatColor.GREEN + punishment.name().charAt(0) + punishment.name().substring(1).toLowerCase());
 
         is.setItemMeta(im);
     }
@@ -50,12 +46,13 @@ public class PunishmentsItem extends GUIItem
         return is;
     }
 
+    public Punishments getPunishments()
+    {
+        return this.punishment;
+    }
+
     @Override
     public void click(Player p, ClickType click) {
-        if (target==null)
-        {
-            return;
-        }
-        new FocusedPunishmentGui(p, this.punishment, this.target);
+
     }
 }

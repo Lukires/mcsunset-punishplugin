@@ -31,7 +31,10 @@ public abstract class GUIItem
 	}
 
 	public GUI gui;
-	
-	
+
+	public void setItemStack(ItemStack is) {
+		this.is = is;
+	}
+
 
 }
