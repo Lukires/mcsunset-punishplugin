@@ -7,9 +7,6 @@ import org.bukkit.inventory.ItemStack;
 import us.sunset.gui.GUIItem;
 import us.sunset.punishment.Punishment;
 
-/**
- * Created by Lukas on 8/11/2018.
- */
 public class PunishmentItem extends GUIItem{
     public PunishmentItem (Punishment punishment)
     {
@@ -23,6 +20,6 @@ public class PunishmentItem extends GUIItem{
 
     @Override
     public ItemStack getItemStack() {
-        return new ItemStack(Material.STONE, 1);
+        return new ItemStack(Material.COBBLESTONE, 1);
     }
 }
